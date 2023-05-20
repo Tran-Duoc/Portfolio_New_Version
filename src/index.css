@@ -1,3 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.boxTextRed {
+  box-shadow: 0 1px 0 0 rgba(255, 56, 96, 0),
+    inset 0 -0.125em 0 rgba(255, 56, 96, 0.2);
+}
+
+.boxText {
+  border-radius: 2px;
+  padding: 0 2px 2px;
+  position: relative;
+  transition-duration: 0.2s;
+  transition-property: box-shadow, color;
+}
+
+.boxTextPurple {
+  box-shadow: 0 1px 0 0 rgba(217, 70, 239, 0.1),
+    inset 0 -0.125em 0 rgba(217, 70, 239, 0.1);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #0f172a #475569;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #0f172a;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #475569;
+  border-radius: 14px;
+}
+
+.boxTextBlue.boxTextActive {
+  color: #55acee;
+  box-shadow: 0 1px 0 4px rgba(85, 172, 238, 0.1),
+    inset 0 -2em 0 rgba(85, 172, 238, 0.1);
+}
+
+.boxTextPurple.boxTextActive {
+  color: #2ec4b6;
+  box-shadow: 0 1px 0 4px rgba(85, 238, 187, 0.1),
+    inset 0 -2em 0 rgba(85, 238, 187, 0.1);
+}

@@ -6,7 +6,7 @@ import Text from "../../../../Components/Text/Text";
 import Typing from "../../../../Components/Typing/Typing";
 import SubTitle from "../../../../Components/SubTitle/SubTitle";
 import Button from "../../../../Components/Button/Button";
-import Icon from "../../../../Components/Icon/Icon";
+import Icon from "../../../../Components/CardItem/CardItem";
 import React from "../../../../assets/images/React.png";
 import Tailwind from "../../../../assets/images/tailwind.png";
 import Redux from "../../../../assets/images/redux.png";
@@ -30,6 +30,11 @@ const LeftSide = () => {
         &nbsp;
         <Text>l</Text>
         <Text>à</Text>
+        &nbsp;
+        <Text color="text-red-600">T</Text>
+        <Text>r</Text>
+        <Text>ầ</Text>
+        <Text>n</Text>
         &nbsp;
         <Text color="text-red-600">Đ</Text>
         <Text>ư</Text>
@@ -119,23 +124,14 @@ const Hero = () => {
           fpsLimit: 120,
           interactivity: {
             events: {
-              onClick: {
-                enable: true,
-              },
               onHover: {
                 enable: true,
                 mode: "connect",
                 parallax: {
-                  enable: false,
+                  enable: true,
                   force: 50,
                   smooth: 10,
                 },
-              },
-              onDiv: {
-                selectors: "#repulse-div",
-                enable: false,
-                mode: "repulse",
-                type: "circle",
               },
               resize: true,
             },
@@ -195,7 +191,7 @@ const Hero = () => {
                 default: "bounce",
               },
               random: false,
-              speed: 3,
+              speed: 5,
               straight: false,
             },
             number: {
@@ -203,7 +199,7 @@ const Hero = () => {
                 enable: true,
                 area: 600,
               },
-              value: 300,
+              value: 200,
             },
             opacity: {
               value: 0.5,

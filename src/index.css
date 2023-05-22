@@ -9,24 +9,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.boxTextRed {
-  box-shadow: 0 1px 0 0 rgba(255, 56, 96, 0),
-    inset 0 -0.125em 0 rgba(255, 56, 96, 0.2);
-}
-
-.boxText {
-  border-radius: 2px;
-  padding: 0 2px 2px;
-  position: relative;
-  transition-duration: 0.2s;
-  transition-property: box-shadow, color;
-}
-
-.boxTextPurple {
-  box-shadow: 0 1px 0 0 rgba(217, 70, 239, 0.1),
-    inset 0 -0.125em 0 rgba(217, 70, 239, 0.1);
-}
-
 * {
   scrollbar-width: thin;
   scrollbar-color: #0f172a #475569;
@@ -47,14 +29,64 @@ body {
   border-radius: 14px;
 }
 
+.boxTextRed {
+  box-shadow: 0 1px 0 0 rgba(255, 56, 96, 0),
+    inset 0 -0.125em 0 rgba(255, 56, 96, 0.2);
+}
+
+.boxText {
+  border-radius: 2px;
+  padding: 0 2px 2px;
+  position: relative;
+  transition-duration: 0.2s;
+  transition-property: box-shadow, color;
+}
+
+.boxTextPurple {
+  box-shadow: 0 1px 0 0 rgba(217, 70, 239, 0.1),
+    inset 0 -0.125em 0 rgba(217, 70, 239, 0.1);
+}
+
 .boxTextBlue.boxTextActive {
   color: #55acee;
   box-shadow: 0 1px 0 4px rgba(85, 172, 238, 0.1),
     inset 0 -2em 0 rgba(85, 172, 238, 0.1);
 }
 
-.boxTextPurple.boxTextActive {
+.boxTextGreen.boxTextActive {
   color: #2ec4b6;
   box-shadow: 0 1px 0 4px rgba(85, 238, 187, 0.1),
     inset 0 -2em 0 rgba(85, 238, 187, 0.1);
+}
+
+.boxTextWarning.boxTextActive {
+  color: #ffb703;
+  box-shadow: 0 1px 0 4px rgba(230, 238, 85, 0.1),
+    inset 0 -2em 0 rgba(230, 238, 85, 0.1);
+}
+.boxTextGood.boxTextActive {
+  color: #2ec4b6;
+  box-shadow: 0 1px 0 4px rgba(85, 187, 238, 0.1),
+    inset 0 -2em 0 rgba(85, 187, 238, 0.1);
+}
+.boxTextPink.boxTextActive {
+  color: #fb6f92;
+  box-shadow: 0 1px 0 4px rgba(238, 85, 192, 0.2),
+    inset 0 -2em 0 rgba(238, 85, 192, 0.2);
+}
+.boxTextYellow.boxTextActive {
+  color: #ff9f1c;
+  box-shadow: 0 1px 0 4px rgba(225, 238, 85, 0.2),
+    inset 0 -2em 0 rgba(225, 238, 85, 0.2);
+}
+
+.boxText_Purple.boxTextActive {
+  color: #7b2cbf;
+  box-shadow: 0 1px 0 4px rgba(177, 85, 238, 0.2),
+    inset 0 -2em 0 rgba(177, 85, 238, 0.2);
+}
+.boxTextRed.boxTextActive {
+  color: #ef233c;
+  box-shadow: 0 1px 0 4px rgba(238, 85, 113, 0.2),
+    inset 0 -2em 0 rgba(238, 85, 113, 0.2);
 }

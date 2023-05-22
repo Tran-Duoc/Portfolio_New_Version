@@ -107,6 +107,9 @@ const Technical = () => {
                         <SubTitle style="boxTextRed boxTextActive  px-5 mx-2">
                           Express
                         </SubTitle>
+                        <SubTitle style="boxTextGreen  boxTextActive  px-5 mx-2">
+                          Vue
+                        </SubTitle>
                       </p>
                     </div>
                   </div>

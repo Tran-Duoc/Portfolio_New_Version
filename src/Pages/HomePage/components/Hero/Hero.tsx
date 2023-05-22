@@ -1,4 +1,4 @@
-import { useCallback, useState, useEffect } from "react";
+import { useCallback } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
@@ -6,19 +6,12 @@ import Text from "../../../../Components/Text/Text";
 import Typing from "../../../../Components/Typing/Typing";
 import SubTitle from "../../../../Components/SubTitle/SubTitle";
 import Button from "../../../../Components/Button/Button";
-import Icon from "../../../../Components/CardItem/CardItem";
 import React from "../../../../assets/images/React.png";
-import Tailwind from "../../../../assets/images/tailwind.png";
-import Redux from "../../../../assets/images/redux.png";
-import ReactRouterDom from "../../../../assets/images/react-router-dom.png";
-import ReactQuery from "../../../../assets/images/react-query.png";
-
-const element = [React, Tailwind, Redux, ReactRouterDom, ReactQuery];
 
 const LeftSide = () => {
   return (
     <>
-      <h1 className="text-4xl font-extrabold text-slate-700 dark:text-slate-100 sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl ">
+      <h1 className="text-4xl font-extrabold text-slate-700 dark:text-slate-100 sm:text-5xl md:text-5xl lg:text-7xl xl:text-8xl ">
         <Text>H</Text>
         <Text>i</Text>
         <Text>,</Text>
@@ -43,7 +36,7 @@ const LeftSide = () => {
         <br />
         <Typing />
       </h1>
-      <div className="  text-slate-800 dark:text-slate-300 text-base  md:text-xl font-medium mt-5 md:mt-8 lg:mt-10  md:flex-row">
+      <div className="text-slate-800 dark:text-slate-300 text-base  md:text-xl font-medium mt-5 md:mt-6 lg:mt-8  md:flex-row">
         <SubTitle style="  duration-500 hover:bg-[#271b30] px-2 hover:text-[#77213d] boxTextRed   boxText">
           Lập trình viên Front end
         </SubTitle>
@@ -52,7 +45,7 @@ const LeftSide = () => {
           Back end
         </SubTitle>
       </div>
-      <div className="mt-2 md:mt-3   text-slate-800 dark:text-slate-300">
+      <div className="text-slate-800 dark:text-slate-300">
         <Button
           type="link"
           path="https://www.facebook.com/profile.php?id=100027522219067"
@@ -72,27 +65,10 @@ const LeftSide = () => {
   );
 };
 const RightSide = () => {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const upDateIndex = () => {
-      if (index < element.length - 1) {
-        setIndex((prev) => prev + 1);
-      } else {
-        setIndex(0);
-      }
-    };
-    const increase = setInterval(upDateIndex, 2300);
-
-    return () => {
-      return clearInterval(increase);
-    };
-  }, [index]);
-
   return (
-    <div className="flex items-center justify-center relative  h-[300px]   ">
-      <div className="mt-10 md:mt-0">
-        <Icon src={element[index]} />
+    <div className="flex items-center justify-center relative  ">
+      <div className="mt-10 md:mt-0 p-12 md:p-4 lg:p-6 overflow-hidden">
+        <img src={React} alt="" className="animate-rotate " loading="lazy" />
       </div>
     </div>
   );

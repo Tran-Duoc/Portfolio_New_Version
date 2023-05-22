@@ -5,16 +5,12 @@ import User from "/src/assets/images/tran_duoc.jpg";
 import FE from "/src/assets/images/front_end.jpg";
 import { data } from "../../../../data/data";
 import { useState, Fragment } from "react";
+import LazyLoadingImage from "../../../../Components/LazyLoadingImage/LazyLoadingImage";
 
 const LeftSide = () => {
   return (
-    <div className="bg-slate-700/30 border-8 shadow-xl shadow-slate-700/20 border-gray-800 rounded-3xl flex items-center justify-center overflow-hidden hover:shadow-slate-600/50  duration-300 hover:-translate-y-2 md:mx-0 mx-2">
-      <img
-        src={User}
-        alt="Trần Minh Được"
-        className="scale-[1]"
-        loading="lazy"
-      />
+    <div className="bg-slate-700/30 border-8 shadow-xl shadow-slate-700/20 border-gray-800 rounded-3xl flex items-center justify-center overflow-hidden hover:shadow-slate-600/50  duration-300 hover:-translate-y-2 md:mx-0 mx-2 h-full">
+      <LazyLoadingImage image={User} />
     </div>
   );
 };

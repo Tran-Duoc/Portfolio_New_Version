@@ -1,7 +1,7 @@
 import SubTitle from "../../../../Components/SubTitle/SubTitle";
-import { javascript } from "@codemirror/lang-javascript";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import projectdata from "../../../../data/project.data";
+import { Fragment } from "react";
 
 const MyProject = () => {
   return (
@@ -17,58 +17,57 @@ const MyProject = () => {
           </SubTitle>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6 md:mt-10 gap-10">
-          {Array(3)
-            .fill(0)
-            .map(() => {
-              return (
-                <div className="col-span-1">
-                  <div className="block overflow-hidden rounded bg-white shadow-xl dark:bg-slate-800 min-h-[30rem]">
-                    <img
-                      src="https://source.unsplash.com/random"
-                      alt=""
-                      className="h-44 w-full object-cover sm:h-52"
-                      loading="lazy"
-                      style={{ color: "transparent" }}
-                    />
+          {projectdata.map((projectItem) => {
+            return (
+              <div className="col-span-1" key={projectItem.id}>
+                <div className="block overflow-hidden rounded bg-white shadow-xl dark:bg-slate-800 min-h-[30rem]">
+                  <img
+                    src="https://source.unsplash.com/random"
+                    alt=""
+                    className="h-44 w-full object-cover sm:h-52"
+                    loading="lazy"
+                    style={{ color: "transparent" }}
+                  />
 
-                    <div className="p-4">
-                      <h3 className="bg-gradient-to-r from-sky-500 to-cyan-400 bg-clip-text text-xl font-bold tracking-tight text-transparent dark:from-sky-400 dark:to-cyan-300 ">
-                        My Portfolio
-                      </h3>
-                      <div>
-                        <p className="flex flex-col md:flex-row gap-5 text-cyan-600 mt-6">
-                          <span className="text-lg boxTextRed">Ngôn ngữ:</span>
-                          <span className="text-lg flex-wrap">
-                            <SubTitle style="boxTextYellow mx-2 boxTextActive">
-                              Javascript
-                            </SubTitle>
-                            +
-                            <SubTitle style="boxTextBlue mx-2 boxTextActive">
-                              Typescript
-                            </SubTitle>
-                          </span>
-                        </p>
-                        <p className="flex flex-col md:flex-row gap-5 text-cyan-600 mt-4">
-                          <span className="text-lg">Library / Framework</span>
-                          <span className="text-lg flex-wrap w-full">
-                            <SubTitle style="  mx-2  text-cyan-400">
-                              React JS, Tailwind CSS, React-Router-Dom, Framer
-                              motion, CodeEditor,...
-                            </SubTitle>
-                          </span>
-                        </p>
-                      </div>
-                      <Link
-                        to="/"
-                        className="w-full flex items-center justify-center bg-cyan-700 text-gray-800 font-semibold text-lg md:text-xl mt-4 py-4 rounded-xl hover:bg-cyan-700/40 duration-200 hover:text-slate-400"
-                      >
-                        <p>Mã Nguồn</p>
-                      </Link>
+                  <div className="p-4">
+                    <h3 className="bg-gradient-to-r from-sky-500 to-cyan-400 bg-clip-text text-xl font-bold tracking-tight text-transparent dark:from-sky-400 dark:to-cyan-300 ">
+                      {projectItem.name}
+                    </h3>
+                    <div>
+                      <p className="flex flex-col md:flex-row gap-5 text-cyan-600 mt-6">
+                        <span className="text-lg boxTextRed">Ngôn ngữ:</span>
+                        <span className="text-lg flex-wrap">
+                          {projectItem.language.map((item, index) => {
+                            return (
+                              <Fragment key={index}>
+                                <SubTitle style="boxTextBlue mx-2 boxTextActive">
+                                  {item}
+                                </SubTitle>
+                              </Fragment>
+                            );
+                          })}
+                        </span>
+                      </p>
+                      <p className="flex flex-col md:flex-row gap-5 text-cyan-600 mt-4">
+                        <span className="text-lg">Library / Framework</span>
+                        <span className="text-lg flex-wrap w-full">
+                          <SubTitle style="  mx-2  text-cyan-400">
+                            {projectItem.Library}
+                          </SubTitle>
+                        </span>
+                      </p>
                     </div>
+                    <Link
+                      to={projectItem.link}
+                      className="w-full flex items-center justify-center bg-cyan-700 text-gray-800 font-semibold text-lg md:text-xl mt-4 py-4 rounded-xl hover:bg-cyan-700/40 duration-200 hover:text-slate-400"
+                    >
+                      <p>Mã Nguồn</p>
+                    </Link>
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

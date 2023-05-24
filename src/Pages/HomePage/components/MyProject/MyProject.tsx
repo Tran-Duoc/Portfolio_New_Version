@@ -17,9 +17,9 @@ const MyProject = () => {
           </SubTitle>
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6 md:mt-10 gap-10">
-          {projectdata.map((projectItem) => {
+          {projectdata.map((projectItem, index) => {
             return (
-              <div className="col-span-1" key={projectItem.id}>
+              <div className="col-span-1" key={projectItem.id * index}>
                 <div className="block overflow-hidden rounded bg-white shadow-xl dark:bg-slate-800 min-h-[30rem]">
                   <img
                     src="https://source.unsplash.com/random"
@@ -39,7 +39,7 @@ const MyProject = () => {
                         <span className="text-lg flex-wrap">
                           {projectItem.language.map((item, index) => {
                             return (
-                              <Fragment key={index}>
+                              <Fragment key={index * 100}>
                                 <SubTitle style="boxTextBlue mx-2 boxTextActive">
                                   {item}
                                 </SubTitle>
@@ -68,6 +68,13 @@ const MyProject = () => {
               </div>
             );
           })}
+        </div>
+        <div className="w-full mt-6 ">
+          <Link to="https://github.com/Tran-Duoc?tab=repositories">
+            <div className="text-lg md:text-xl text-center bg-cyan-600 py-3 text-slate-700 font-semibold hover:bg-cyan-700 hover:text-slate-400 duration-300 rounded-xl capitalize  ">
+              Xem thêm tại trang github cá nhân của mình
+            </div>
+          </Link>
         </div>
       </div>
     </div>

@@ -17,7 +17,7 @@ const LeftSide = () => {
 };
 
 const RightSide = () => {
-  const [info, setInfo] = useState<DataType[]>(data);
+  const [info] = useState<DataType[]>(data);
   const [indexElement, setIndexElement] = useState<number>(0);
   const [activeTab, setActiveTab] = useState<string | number>(0);
   const handleActive = (

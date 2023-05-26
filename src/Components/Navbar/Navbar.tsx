@@ -1,7 +1,6 @@
 import { AiFillGithub } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Dropdown from "../Dropdown/Dropdown";
 
 const Logo = () => {
   return (

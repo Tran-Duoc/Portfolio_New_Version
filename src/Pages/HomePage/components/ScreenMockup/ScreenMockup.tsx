@@ -1,4 +1,3 @@
-import SubTitle from "../../../../Components/SubTitle/SubTitle";
 import Text from "../../../../Components/Text/Text";
 import LaptopMockup from "/src/assets/images/coding.png";
 import debug from "/src/assets/images/debugging-programming.gif";

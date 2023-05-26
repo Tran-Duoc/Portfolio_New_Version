@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Light = () => {
   return (
@@ -47,17 +47,28 @@ const Dark = () => {
 
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState<JSX.Element>(<Dark />);
-
-  const handleToggle = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    console.log(e.target);
+  const [selectedOption, setSelectedOption] = useState<JSX.Element>(<Light />);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+  const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
   const handleOptionClick = (option: JSX.Element) => {
     setSelectedOption(option);
+    setIsDarkMode(!isDarkMode);
     setIsOpen(false);
   };
+
+  useEffect(() => {
+    if (
+      isDarkMode &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDarkMode]);
 
   return (
     <div className="ml-4">
@@ -72,7 +83,7 @@ const Dropdown = () => {
         </button>
 
         {isOpen && (
-          <ul className="absolute -right-1/2 mt-4 py-2 bg-slate-800   px-2 rounded-xl shadow-md w-[200px] ">
+          <ul className="absolute -right-1/2 mt-4 py-2    bg-white dark:bg-slate-800  px-2 rounded-xl shadow-md w-[200px] ">
             <li
               className="px-4 py-2 cursor-pointer  hover:bg-[#2a3749]"
               onClick={() => handleOptionClick(<Light />)}
@@ -85,6 +96,7 @@ const Dropdown = () => {
             <li
               className="px-4 py-2 cursor-pointer hover:bg-[#2a3749]"
               onClick={() => handleOptionClick(<Dark />)}
+              data-mode="dark"
             >
               <div className="flex items-end font-semibold  text-base">
                 <Dark />

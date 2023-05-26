@@ -11,7 +11,7 @@ const Button = ({ type, children, style, path }: Props) => {
   return (
     <>
       {type === "link" ? (
-        <Link to={`${path ? path : ""} `} className={style}>
+        <Link to={`${path ? path : ""} `} className={style} target="_blank">
           {children}
         </Link>
       ) : (

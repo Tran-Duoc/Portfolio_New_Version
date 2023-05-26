@@ -32,15 +32,15 @@ const Navbar = () => {
           <div className="flex items-center  justify-between px-3 lg:px-0">
             <Logo />
             <div className="flex items-center gap-8 ml-auto pr-5">
-              <Link to="https://github.com/Tran-Duoc">
+              <Link to="https://github.com/Tran-Duoc" target="_blank">
                 <AiFillGithub size={26} />
               </Link>
-              <Link to="https://www.facebook.com/profile.php?id=100027522219067">
+              <Link
+                to="https://www.facebook.com/profile.php?id=100027522219067"
+                target="_blank"
+              >
                 <FaFacebook size={26} />
               </Link>
-              <div className="border-l-2">
-                <Dropdown />
-              </div>
             </div>
           </div>
         </div>

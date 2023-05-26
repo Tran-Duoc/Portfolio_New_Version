@@ -51,7 +51,7 @@ const ScreenMockup = () => {
               <h2 className="text-xl font-semibold uppercase my-4 text-blue-600">
                 <span>Gif joke</span>
               </h2>
-              <img src={debug} alt="GIF Joke" />
+              <img src={debug} alt="GIF Joke" className="w-full h-full" />
             </div>
           </div>
         </div>

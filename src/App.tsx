@@ -4,11 +4,9 @@ import Home from "./Pages/HomePage/Home";
 function App() {
   return (
     <>
-      <h1 className="min-h-screen bg-[#0f172a]">
-        <MainLayout>
-          <Home />
-        </MainLayout>
-      </h1>
+      <MainLayout>
+        <Home />
+      </MainLayout>
     </>
   );
 }

@@ -2,6 +2,7 @@ import { FC, Suspense } from "react";
 import Navbar from "../../Components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import React from "react";
+import Footer from "../../Components/Footer/Footer";
 
 const About = React.lazy(() => import("./components/About/About"));
 const Technical = React.lazy(() => import("./components/Technical/Technical"));
@@ -13,7 +14,7 @@ const ScreenMockup = React.lazy(
 
 const Loading = () => {
   return (
-    <div className="flex items-center justify-center p-10">
+    <div className="flex items-center justify-center p-10 h-40">
       <div role="status">
         <svg
           aria-hidden="true"
@@ -58,6 +59,9 @@ const Home: FC = () => {
       </Suspense>
       <Suspense fallback={<Loading />}>
         <ScreenMockup />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <Footer />
       </Suspense>
     </div>
   );

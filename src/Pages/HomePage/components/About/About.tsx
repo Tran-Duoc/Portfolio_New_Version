@@ -6,6 +6,7 @@ import FE from "/src/assets/images/front_end.jpg";
 import { data } from "../../../../data/data";
 import { useState, Fragment } from "react";
 import LazyLoadingImage from "../../../../Components/LazyLoadingImage/LazyLoadingImage";
+import { DataType } from "../../../../types/type";
 
 const LeftSide = () => {
   return (
@@ -16,6 +17,7 @@ const LeftSide = () => {
 };
 
 const RightSide = () => {
+  const [info, setInfo] = useState<DataType[]>(data);
   const [indexElement, setIndexElement] = useState<number>(0);
   const [activeTab, setActiveTab] = useState<string | number>(0);
   const handleActive = (
@@ -25,7 +27,6 @@ const RightSide = () => {
     const target = e.target as HTMLDivElement;
     const customValue = target.getAttribute("data-value");
     setActiveTab(id);
-    console.log(id);
     setIndexElement(Number(customValue));
   };
 
@@ -61,12 +62,12 @@ const RightSide = () => {
         <div className="relative ">
           <div className="absolute top-0 w-full h-2  n bg-cyan-900 rounded-3xl"></div>
           <div className="flex justify-between relative z-20 -translate-y-[6px] ">
-            {data.map((item) => {
+            {data.map((item, index) => {
               return (
                 <Fragment key={item.id}>
                   <Dot
                     style="w-2 h-2 bg-slate-900"
-                    value={item.id}
+                    customValue={index}
                     handle={(e) => handleActive(e, item.id)}
                     itemID={item.id}
                     activeIndex={activeTab}
@@ -81,7 +82,7 @@ const RightSide = () => {
                 <span>{data[indexElement].year}</span>
               </h2>
               <div className="text-sm md:text-lg  mt-3 md:mt-6 mb-10 md:mb-5 min-h-[140px] md:min-h-[160px] lg:min-h-[180px]">
-                <p>{data[indexElement].content}</p>
+                <p>{info[indexElement].content}</p>
               </div>
             </div>
           </div>

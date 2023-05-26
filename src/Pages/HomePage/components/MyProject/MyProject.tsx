@@ -60,6 +60,7 @@ const MyProject = () => {
                     <Link
                       to={projectItem.link}
                       className="w-full flex items-center justify-center bg-cyan-700 text-gray-800 font-semibold text-lg md:text-xl mt-4 py-4 rounded-xl hover:bg-cyan-700/40 duration-200 hover:text-slate-400"
+                      target="_blank"
                     >
                       <p>Mã Nguồn</p>
                     </Link>
@@ -70,7 +71,10 @@ const MyProject = () => {
           })}
         </div>
         <div className="w-full mt-6 ">
-          <Link to="https://github.com/Tran-Duoc?tab=repositories">
+          <Link
+            target="_blank"
+            to="https://github.com/Tran-Duoc?tab=repositories"
+          >
             <div className="text-lg md:text-xl text-center bg-cyan-600 py-3 text-slate-700 font-semibold hover:bg-cyan-700 hover:text-slate-400 duration-300 rounded-xl capitalize  ">
               Xem thêm tại trang github cá nhân của mình
             </div>

@@ -1,0 +1,46 @@
+{
+  "skill": [
+    {
+      "name": "Full Stack Movie",
+      "image": "https://elight.edu.vn/wp-content/uploads/2020/08/pha%CC%82n-bie%CC%A3%CC%82t-movie-va%CC%80-film-1200x675.png",
+      "link": "https://github.com/Tran-Duoc/FullStack_Movie",
+      "technical": [
+        "React",
+        "Redux",
+        "MUI",
+        "React Query",
+        "React Hook From",
+        "Tailwind",
+        "NodeJS",
+        "Mongoose",
+        "Json Web Token"
+      ]
+    },
+    {
+      "name": "My Portfolio",
+      "image": "https://thumbs.dreamstime.com/z/my-portfolio-lettering-blog-shop-banners-studio-shot-my-portfolio-lettering-blog-shop-banners-150373793.jpg?w=992",
+      "link": "https://github.com/Tran-Duoc/Portfolio_New_Version",
+      "technical": [
+        "React",
+        "MUI",
+        "React Query",
+        "React Hook From",
+        "Tailwind"
+      ]
+    },
+    {
+      "name": "Shopee Clone",
+      "image": "https://wiki.matbao.net/wp-content/uploads/2021/09/vi-shopee-pay-01-1200x900.jpg",
+      "link": "https://github.com/Tran-Duoc/Shopee_Clone",
+      "technical": [
+        "React",
+        "Redux",
+        "MUI",
+        "React Query",
+        "React Hook From",
+        "Tailwind",
+        "Json Web Token"
+      ]
+    }
+  ]
+}

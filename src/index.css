@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .view {
+    @apply max-w-8xl mx-auto;
+  }
+  .text-hover {
+    @apply inline-block transition-all duration-200 hover:-translate-y-2 hover:text-cyan-500;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #0f172a #475569;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #0f172a;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 14px;
+}
+
+.slider-no-controls .slick-prev,
+.slider-no-controls .slick-next {
+  display: none !important;
+}
+
+.slick-slider {
+  margin: 0 -15px;
+}
+.slick-slide {
+  padding: 10px;
+  text-align: center;
+  margin: 0 15px;
+}
+
+.boxText {
+  border-radius: 2px;
+  padding: 0 2px 2px;
+  margin: 0 5px;
+  position: relative;
+  transition-duration: 0.2s;
+  transition-property: box-shadow, color;
+}
+
+.boxTextBlue.boxTextActive {
+  color: #55acee;
+  box-shadow: 0 1px 0 4px rgba(85, 172, 238, 0.1),
+    inset 0 -2em 0 rgba(85, 172, 238, 0.1);
+}
+
+.boxTextBlue {
+  box-shadow: 0 1px 0 0 rgba(85, 172, 238, 0),
+    inset 0 -0.125em 0 rgba(85, 172, 238, 0.2);
+}
+.boxTextPink {
+  box-shadow: 0 1px 0 0 rgba(235, 85, 238, 0),
+    inset 0 -0.125em 0 rgba(207, 85, 238, 0.2);
+}
+
+.boxTextPink.boxTextActive {
+  color: #eeeb55;
+  box-shadow: 0 1px 0 4px rgba(223, 85, 238, 0.1),
+    inset 0 -2em 0 rgba(220, 85, 238, 0.1);
+}
+.boxTextYellow {
+  box-shadow: 0 1px 0 0 rgba(223, 238, 85, 0.1),
+    inset 0 -0.125em 0 rgba(218, 238, 85, 0.2);
+}
+
+.boxTextYellow.boxTextActive {
+  color: #eeeb55;
+  box-shadow: 0 1px 0 4px rgba(218, 238, 85, 0.1),
+    inset 0 -2em 0 rgba(220, 238, 85, 0.1);
+}
+.boxTextGreen {
+  box-shadow: 0 1px 0 0 rgba(146, 238, 85, 0.1),
+    inset 0 -0.125em 0 rgba(138, 238, 85, 0.2);
+}
+
+.boxTextGreen.boxTextActive {
+  color: #55ee5a;
+  box-shadow: 0 1px 0 4px rgba(144, 238, 85, 0.1),
+    inset 0 -2em 0 rgba(141, 238, 85, 0.1);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 2rem !important;
+  color: red;
+  font-weight: bold;
+}
+
+.swiper-button-disabled {
+  opacity: 0 !important;
+}

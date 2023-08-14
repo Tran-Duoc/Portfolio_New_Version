@@ -1,0 +1,122 @@
+[
+  {
+    "name": "JavaScript",
+    "image": "https://techstack-generator.vercel.app/js-icon.svg",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "TypeScript",
+    "image": "https://techstack-generator.vercel.app/ts-icon.svg",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "ReactJS",
+    "image": "https://techstack-generator.vercel.app/react-icon.svg",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "Redux",
+    "image": "https://techstack-generator.vercel.app/redux-icon.svg",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "Sass",
+    "image": "https://techstack-generator.vercel.app/sass-icon.svg",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "Prettier",
+    "image": "https://techstack-generator.vercel.app/prettier-icon.svg",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "Python",
+    "image": "https://techstack-generator.vercel.app/python-icon.svg",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "RestAPI",
+    "image": "https://techstack-generator.vercel.app/restapi-icon.svg",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "MySQL",
+    "image": "https://techstack-generator.vercel.app/mysql-icon.svg",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "CSS",
+    "image": "https://skillicons.dev/icons?i=css",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "HTML",
+    "image": "https://skillicons.dev/icons?i=html",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "VueJS",
+    "image": "https://skillicons.dev/icons?i=vue",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "NestJS",
+    "image": "https://skillicons.dev/icons?i=nestjs",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "NextJS",
+    "image": "https://skillicons.dev/icons?i=nextjs",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "Git",
+    "image": "https://skillicons.dev/icons?i=git",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "Mongoose",
+    "image": "https://skillicons.dev/icons?i=mongodb",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "tailwind",
+    "image": "https://skillicons.dev/icons?i=tailwind",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "Bootstrap",
+    "image": "https://skillicons.dev/icons?i=bootstrap",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "Material UI",
+    "image": "https://skillicons.dev/icons?i=materialui",
+    "width": 100,
+    "height": 100
+  },
+  {
+    "name": "NodeJS",
+    "image": "https://skillicons.dev/icons?i=css",
+    "width": 100,
+    "height": 100
+  }
+]

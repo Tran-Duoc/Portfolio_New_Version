@@ -1,5 +1,4 @@
-import React from "react";
-
+ 
 interface Props extends React.HTMLAttributes<HTMLSpanElement> {
   children: string | React.ReactNode;
 }

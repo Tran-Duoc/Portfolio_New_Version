@@ -59,7 +59,7 @@ const Project = () => {
                           );
                         })}
                       </span>
-                      <div className=''>
+                      <div className='py-5'>
                         <Link
                           to={item.link}
                           target='_blank'

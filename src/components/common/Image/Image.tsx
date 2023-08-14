@@ -1,5 +1,4 @@
-import React from "react";
-
+ 
 interface Props
   extends React.DetailedHTMLProps<
     React.ImgHTMLAttributes<HTMLImageElement>,

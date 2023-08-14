@@ -3,7 +3,12 @@ import useDarkMode from '../../hooks/useDarkMode';
 import LinkRouter from '../common/Link/LinkRouter';
 import Logo from '../common/Logo/Logo';
 import Button from '@mui/material/Button';
+import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import { Tooltip } from '@mui/material';
 const Navbar = () => {
   const { theme, handleChangeTheme } = useDarkMode();
 
@@ -16,13 +21,27 @@ const Navbar = () => {
               <Logo />
             </LinkRouter>
             <div className='flex gap-4'>
-              <Button
-                onClick={() => {
-                  handleChangeTheme();
-                }}
-              >
-                change
-              </Button>
+              <Tooltip title='Github'>
+                <Button variant='outlined' href={path.github} target='_blank'>
+                  <GitHubIcon />
+                </Button>
+              </Tooltip>
+              <Tooltip title='FaceBook'>
+                <Button variant='outlined' href={path.face} target='_blank'>
+                  <FacebookOutlinedIcon />
+                </Button>
+              </Tooltip>
+
+              <Tooltip title='Change theme mode'>
+                <Button
+                  variant='outlined'
+                  onClick={() => {
+                    handleChangeTheme();
+                  }}
+                >
+                  {theme ? <LightModeIcon /> : <DarkModeIcon />}
+                </Button>
+              </Tooltip>
             </div>
           </div>
         </div>
